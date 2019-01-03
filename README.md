@@ -2,17 +2,25 @@
 
 > A Vue.js project
 
-## Build Setup
+## 使用组件
 
 ``` bash
-# install dependencies
-npm install
+# 安装npm包
+npm install vue-flag-list-test --save-dev
 
-# serve with hot reload at localhost:8080
-npm run dev
+# 易用vue-flag-list插件
+import VueFlagList from 'vue-flag-list'
 
-# build for production with minification
-npm run build
+Vue.use(VueFlagList)
+
+# 在组件中使用
+<flagCode height="30" width="120" @getCode="getCode"></flagCode>
+
+methods: {
+    getCode(code){
+        console.log(code);
+    }
+}
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
